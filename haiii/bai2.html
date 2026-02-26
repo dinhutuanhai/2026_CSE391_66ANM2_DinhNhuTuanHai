@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Landing Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            position: relative;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .logo {
+            color: yellow;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            height: 90vh;
+            background: url('https://picsum.photos/1600/900?travel') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            background: rgba(0,0,0,0.6);
+            padding: 40px 60px;
+            text-align: center;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .hero-content h1 {
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: yellow;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .btn:hover {
+            background: orange;
+        }
+
+        /* ===== HIGHLIGHTS ===== */
+        .highlights {
+            padding: 60px;
+            text-align: center;
+            background: #dff5f6;
+        }
+
+        .highlights h2 {
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+        }
+
+        .card p {
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        .card span {
+            color: teal;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">TRAVEL GOALS</div>
+        <ul class="menu">
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>JOE'S TRAVEL PAGE</h1>
+            <p>LET'S EXPLORE THE WORLD TOGETHER</p>
+            <a href="#" class="btn">Discover places</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="highlights">
+        <h2>HIGHLIGHTS</h2>
+
+        <div class="cards">
+            <div class="card">
+                <img src="https://picsum.photos/400/250?1">
+                <p>MIAMI <span>USA</span></p>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/400/250?2">
+                <p>MUNICH <span>GERMANY</span></p>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/400/250?3">
+                <p>BARCELONA <span>SPAIN</span></p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
+</footer>
+
+</body>
+</html>
