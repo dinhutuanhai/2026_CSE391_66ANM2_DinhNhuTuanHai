@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Đặt Hàng</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:40px;
+}
+
+.error{
+color:red;
+font-size:13px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Form Đặt Hàng</h2>
+
+<form id="orderForm">
+
+<label>Sản phẩm</label>
+<select id="product">
+<option value="">-- Chọn sản phẩm --</option>
+<option value="ao">Áo</option>
+<option value="quan">Quần</option>
+<option value="giay">Giày</option>
+</select>
+<span class="error"></span>
+
+<label>Số lượng</label>
+<input id="quantity" type="number">
+<span class="error"></span>
+
+<label>Ngày giao</label>
+<input id="date" type="date">
+<span class="error"></span>
+
+<label>Địa chỉ</label>
+<input id="address">
+<span class="error"></span>
+
+<label>Ghi chú</label>
+<textarea id="note"></textarea>
+<div id="counter">0/200</div>
+
+<p>Thanh toán</p>
+<label><input type="radio" name="pay" value="COD">COD</label>
+<label><input type="radio" name="pay" value="Bank">Chuyển khoản</label>
+
+<br><br>
+
+<p>Tổng tiền: <span id="total">0</span></p>
+
+<button type="submit">Đặt hàng</button>
+
+</form>
+
+<div id="confirmBox" style="display:none"></div>
+
+<script src="2.js"></script>
+
+</body>
+</html>
